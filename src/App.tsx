@@ -1,4 +1,4 @@
-// App.tsx - Fixed with no white flash and removed footer border
+// App.tsx - Fixed with blur background during loading
 import React, { useState, useEffect } from 'react'
 import portfolioDataDefault from './data/portfolioData'
 import Navbar from './components/Navbar'
@@ -33,7 +33,37 @@ export default function App() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
+        {/* Same blur background elements as main page */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/4 w-60 h-60 bg-slate-500/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        {/* Optional: Add a subtle loading animation */}
+        <div className="flex items-center justify-center min-h-screen">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="flex flex-col items-center space-y-4"
+          >
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+              className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full"
+            />
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-blue-300 text-lg font-semibold"
+            >
+              Loading...
+            </motion.p>
+          </motion.div>
+        </div>
+      </div>
     )
   }
 
