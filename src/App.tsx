@@ -33,7 +33,7 @@ export default function App() {
 
   // Function to open resume in new window
   const openResume = () => {
-    window.open('/src/assets/RESUME_SABARI.pdf', '_blank', 'noopener,noreferrer')
+    window.open('https://drive.google.com/file/d/1DRREj-j-XdvO_s6S9o1uTy9a1JeAaD9h/view', '_blank', 'noopener,noreferrer')
   }
 
   if (isLoading) {
@@ -166,7 +166,7 @@ export default function App() {
                         className="px-4 sm:px-6 py-2 sm:py-3 border border-green-600 rounded-full font-semibold hover:bg-green-600/10 transition-colors flex items-center gap-2 text-green-300 hover:text-green-200 text-sm sm:text-base"
                       >
                         <i className="fas fa-download text-xs sm:text-sm"></i>
-                        Download Resume
+                        View Resume
                       </button>
                     </motion.div>
                   </div>
@@ -188,7 +188,7 @@ export default function App() {
                       <div className="absolute bottom-24 right-24 w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-1500"></div>
                     </div>
 
-                    {/* Floating Code Elements */}
+                    {/* Floating Code Elements - Updated for Dart/Flutter */}
                     <div className="relative z-10 h-full flex flex-col justify-center space-y-3 sm:space-y-4">
                       <motion.div
                         initial={{ opacity: 0, x: 50 }}
@@ -207,7 +207,7 @@ export default function App() {
                         className="flex items-center space-x-2 sm:space-x-3 ml-3 sm:ml-4"
                       >
                         <div className="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-400 rounded-full"></div>
-                        <code className="text-gray-400 font-mono text-xs sm:text-sm">def <span className="text-green-300">build_app</span>():</code>
+                        <code className="text-gray-400 font-mono text-xs sm:text-sm"><span className="text-blue-300">Future</span>&lt;<span className="text-green-300">void</span>&gt; <span className="text-green-300">buildApp</span>()</code>
                       </motion.div>
                       
                       <motion.div
@@ -216,7 +216,7 @@ export default function App() {
                         transition={{ delay: 0.8 }}
                         className="flex items-center space-x-2 sm:space-x-3 ml-6 sm:ml-8"
                       >
-                        <code className="text-purple-300 font-mono text-xs sm:text-sm">return <span className="text-yellow-300">"Amazing UX"</span></code>
+                        <code className="text-purple-300 font-mono text-xs sm:text-sm">return <span className="text-yellow-300">"Amazing UX"</span>;</code>
                       </motion.div>
 
                       <motion.div
@@ -226,7 +226,7 @@ export default function App() {
                         className="flex items-center space-x-2 sm:space-x-3 mt-4 sm:mt-6"
                       >
                         <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full"></div>
-                        <code className="text-blue-300 font-mono text-xs sm:text-sm">skills = [</code>
+                        <code className="text-blue-300 font-mono text-xs sm:text-sm">final <span className="text-cyan-300">skills</span> = [</code>
                       </motion.div>
 
                       <motion.div
@@ -249,8 +249,17 @@ export default function App() {
                         </div>
                         <div className="flex items-center space-x-1 sm:space-x-2">
                           <div className="w-1 h-1 sm:w-2 sm:h-2 bg-purple-400 rounded-full"></div>
-                          <code className="text-purple-300 font-mono text-xs">"API"</code>
+                          <code className="text-purple-300 font-mono text-xs">"APIs"</code>
                         </div>
+                      </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 1.4 }}
+                        className="flex items-center space-x-2 sm:space-x-3 ml-6 sm:ml-8 mt-2"
+                      >
+                        <code className="text-gray-400 font-mono text-xs sm:text-sm">]; <span className="text-green-300"></span></code>
                       </motion.div>
 
                       {/* Animated cursor */}
@@ -271,7 +280,7 @@ export default function App() {
                       <i className="fab fa-flutter text-blue-400 animate-bounce"></i>
                     </div>
                     <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 text-lg sm:text-xl">
-                      <i className="fas fa-mobile-alt text-cyan-400 animate-pulse"></i>
+                      <i className="fas fa-code text-cyan-400 animate-pulse"></i>
                     </div>
                   </div>
 
@@ -283,8 +292,8 @@ export default function App() {
                     className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 mt-6 sm:mt-8"
                   >
                     <div className="flex flex-col items-center text-center p-3 sm:p-4 bg-slate-800/50 rounded-xl border border-slate-700 group hover:bg-slate-800/70 transition-all duration-300">
-                      <i className="fas fa-mobile-alt text-xl sm:text-2xl text-blue-400 mb-2"></i>
-                      <h3 className="text-white font-semibold mb-1 text-sm sm:text-base">Flutter Enthusiastic</h3>
+                      <i className="fab fa-flutter text-xl sm:text-2xl text-blue-400 mb-2"></i>
+                      <h3 className="text-white font-semibold mb-1 text-sm sm:text-base">Flutter Expert</h3>
                       <p className="text-gray-400 text-xs sm:text-sm">Cross-Platform Development</p>
                     </div>
                     
