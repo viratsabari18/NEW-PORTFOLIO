@@ -292,7 +292,7 @@ export default function App() {
                     className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 mt-6 sm:mt-8"
                   >
                     <div className="flex flex-col items-center text-center p-3 sm:p-4 bg-slate-800/50 rounded-xl border border-slate-700 group hover:bg-slate-800/70 transition-all duration-300">
-                      <i className="fab fa-flutter text-xl sm:text-2xl text-blue-400 mb-2"></i>
+                      <i className="fas fa-mobile-alt text-xl sm:text-2xl text-blue-400 mb-2"></i>
                       <h3 className="text-white font-semibold mb-1 text-sm sm:text-base">Flutter Expert</h3>
                       <p className="text-gray-400 text-xs sm:text-sm">Cross-Platform Development</p>
                     </div>
